@@ -36,22 +36,42 @@ footer {
     border: 30px solid rgb(231, 229, 229);
 }
 
-.butn {
-    text-decoration: blue;
-}
-
 ul li {
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: rgb(204, 202, 202 nm);
+    width: 260px;
+    padding: 10px 10px 10px 20px;
+    background: rgb(204, 202, 202);
+    list-style-type: none;
+    border: darkgray;
+    margin-right: 30px;
 }
 
 ul li:hover {
-    background: rgb(105, 104, 104);
+    background: rgb(73, 72, 72);
 }
 
 ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
+}
+
+ul li.checked::before {
+    content: '\f096';
+    border-color: #fff;
+    border-style: solid;
+    left: 15px;
+    margin-right: 5px;
+    font-size: 22px;
+    line-height: 1;
+    width: 1em;
+    display: inline-block
+}
+
+ul li.checked::after {
+    content: normal;
+    text-decoration-color: rgb(51, 50, 51);
+}
+
+input[type="checkbox"] {
+    display: none;
 }
