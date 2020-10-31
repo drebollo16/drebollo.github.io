@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Week 7</title>
+    <style>
+        main {
+            margin: 0 auto;
+            margin-left: 30px;
+        }
+        
+        h5 {
+            color: blue;
+            font-size: 15px;
+        }
+        
+        li {
+            text-align: left;
+            font-size: 16px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Notes for WDD 330 Course</h1>
+    </header>
+    <main>
+        <h3>Week 07 Questions?</h3>
+        <h5>Chapter 11 Further Functions</h5>
+        <li> The fact that functions are first-class objects means they can have properties and methods themselves.<br> For example, all functions have a length property that returns the number of parameters the function has.</li>
+        <li>The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.<br>If the function that’s called requires any parameters, these need to be provided as arguments after the first argument,
+            which is always the value of this</li>
+        <li>There is no way to remove a variable from a scope once it’s been declared.<br> If a variable is only required temporarily, it may cause confusion if it’s still available later in the code. Even worse, the name of the variable may clash with another
+            piece of code (an external JavaScript library, for example) resulting in errors. </li>
+        <li>One of the problems with simply placing 'use strict' at the beginning of a file <br>is that it will enforce strict mode on all the JavaScript in the file, and if you’re using other people’s code, there’s no guarantee that they’ve coded in strict
+            mode. </li>
+        (function() { <br> 'use strict';<br> // All your code would go inside this function<br> })();<br>
+        <br>
+        <li>A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. A common example is a function that calculates thefactorialof a number:</li>
+        <li> A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying da</li>
+        <h5>Chapter 13 Ajax</h5>
+        <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading.</li>
+        <li>The use of Ajax revolutionized how websites worked, and ushered in a new age of web applications. Web pages were no longer static, but dynamic applications.</li>
+
+        <li>JavaScript was always considered a 'front-end' language, not used to communicate with the server.<br> Ajax enabled JavaScript to send requests and receive responses from a server, allowing content to be updated in real time.</li>
+
+        <li>JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.</li>
+        fetch(url)<br> .then( response => response.json() ); // transforms the JSON data into a JavaScript object<br> .then( data => console.log(Object.entries(data)) )<br> .catch( error => console.log('There was an error: ', error))<br>
+        <li>In the example below, the Object.entries() method is used to view the key and value pairs in the returned object.</li>
+
+    </main>
+    <footer>
+
+
+    </footer>
+</body>
+
+</html>
