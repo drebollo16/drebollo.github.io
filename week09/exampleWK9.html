@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang='en'>
+<style>
+    /*
+    #square {
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background: #d16;
+    }*/
+    
+    #square {
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background: #cc0;
+        animation: spin 4s linear infinite;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(3600deg);
+        }
+    }
+</style>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Animation Example</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <div id='square'></div>
+    <script>
+        const squareElement = document.getElementById('square');
+        let angle = 0;
+        setInterval(() => {
+            angle = (angle + 2) % 360;
+            squareElement.style.transform = `rotate(${angle}deg)`
+        }, 1000 / 60);
+    </script>
+
+</body>
+
+</html>
